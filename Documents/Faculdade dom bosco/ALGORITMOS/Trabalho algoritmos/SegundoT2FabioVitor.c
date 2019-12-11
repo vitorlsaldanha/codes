@@ -23,6 +23,7 @@ int main (void){
 	
 	int rg[N];
 	int i, contador_pesquisa = 0, ancora, aux, rg_pesquisado;
+	int encontrou = 0, fim = 0;
 	int flag_while = 0;
 	
 	//preenche o vetor de RG's
@@ -46,6 +47,24 @@ int main (void){
 		//flag do while recebe verdadeiro
 		flag_while = 1;		
 	
+	//aqui vai ter que ter um while (a sora falou)
+		//abaixo vai ter que ter a pesquisa sequencial
+     	while((encontrou == 0) && (fim == 0)){
+         	if(vetor[i] == rg_pesquisado){
+            	 encontrou = 1;
+            	 //variavel incrementadora (contador_pesquisa++)
+         	}else{
+           		if(i < N-1){
+                	i++;
+           		}else{
+                	fim = 1; 
+            	}
+        	}
+     	}
+    	//fim pesquisa sequencial
+    //fim do while de fora
+	
+	//aqui vai ter que ter um bubble pra ordenar os itens da pesquisa
 		//buuble sort para ordenar os RGS
 		for(ancora = 0; ancora<N; ancora++){
 			for(i = ancora+1; i < N; i++){
