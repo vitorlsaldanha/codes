@@ -22,7 +22,7 @@ Defina um flag para o encerramento da pesquisa.
 int main (void){
 	
 	int rg[N];
-	int i, contador_pesquisa = 0, rg_pesquisado;
+	int i, contador_pesquisa = 0, ancora, aux, rg_pesquisado;
 	int flag_while = 0;
 	
 	//preenche o vetor de RG's
@@ -38,24 +38,29 @@ int main (void){
 	
 	//valida a entrada na pesquisa do RG
 	printf("Digite um RG para pesquisar ou 0 para sair: ");
-	scanf("%d"&rg_pesquisado);
+	scanf("%d",&rg_pesquisado);
 	
 	//zero os contadores e inicializo o i com 0
 	i = 0, contador_pesquisa = 1;
 	while(rg_pesquisado != 0){
 		//flag do while recebe verdadeiro
-		flag_while = 1;
-		
-		
-		/*
-			LÓGICA AQUI kkkk
-		*/
+		flag_while = 1;		
+	
+		for(ancora = 0; ancora<N; ancora++){
+			for(i = 0; i < N; i++){
+				if(rg[ancora]>rg[i]){
+					aux = rg[ancora];
+					rg[ancora] = rg[i];
+					rg[i] = aux;
+				}
+			}
+		}
 		
 		
 		
 		//faz uma nova pergunta
 		printf("Digite um novo RG para pesquisar ou 0 para sair: ");
-		scanf("%d"&rg_pesquisado);
+		scanf("%d",&rg_pesquisado);
 	}	
 	
 	
