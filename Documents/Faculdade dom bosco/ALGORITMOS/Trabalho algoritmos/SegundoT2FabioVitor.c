@@ -46,8 +46,9 @@ int main (void){
 		//flag do while recebe verdadeiro
 		flag_while = 1;		
 	
+		//buuble sort para ordenar os RGS
 		for(ancora = 0; ancora<N; ancora++){
-			for(i = 0; i < N; i++){
+			for(i = ancora+1; i < N; i++){
 				if(rg[ancora]>rg[i]){
 					aux = rg[ancora];
 					rg[ancora] = rg[i];
@@ -55,13 +56,16 @@ int main (void){
 				}
 			}
 		}
-		
+		for(i = 0; i < N; i++){
+		printf("%d ",rg[i]);				
+	}
 		
 		
 		//faz uma nova pergunta
 		printf("Digite um novo RG para pesquisar ou 0 para sair: ");
 		scanf("%d",&rg_pesquisado);
 	}	
+	
 	
 	
 	
