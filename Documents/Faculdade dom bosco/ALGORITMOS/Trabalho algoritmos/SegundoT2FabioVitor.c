@@ -17,7 +17,7 @@ Defina um flag para o encerramento da pesquisa.
 */
 
 #include <stdio.h>
-#define N 3
+#define N 6
 
 int main (void){
 	
@@ -56,10 +56,13 @@ int main (void){
 				}
 			}
 		}
-		for(i = 0; i < N; i++){
-		printf("%d ",rg[i]);				
-	}
 		
+		//verifica se o bubble sort está correto
+		/*
+		for(i = 0; i < N; i++){
+			printf("%d ",rg[i]);				
+		}
+		*/
 		
 		//faz uma nova pergunta
 		printf("Digite um novo RG para pesquisar ou 0 para sair: ");
